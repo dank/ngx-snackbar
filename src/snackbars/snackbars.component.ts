@@ -4,7 +4,7 @@ import {SnackbarService} from '../service/snackbar.service';
 @Component({
   selector: 'ngx-snackbars',
   template: `
-      <div class="snackbars" [ngClass]="position">
+      <div class="snackbars" [ngClass]="position || 'bottom-right'">
           <ngx-snackbar *ngFor="let snackbar of snacks" [background]="snackbar.background || background"
                         [customClass]="snackbar.customClass || customClass"
                         [color]="snackbar.color || color || calcTextColor(snackbar.background || background)">

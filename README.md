@@ -26,7 +26,7 @@ Import styles.css into your app. This step is optional, feel free to theme the s
 ...
   "styles": [
    "styles.css",
-   "../node_modules/ngx-snackbar/bundles/style.css",
+   "../node_modules/ngx-snackbar/bundles/style.css"
   ],
 ...
 ```
