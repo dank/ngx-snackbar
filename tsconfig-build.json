@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "baseUrl": ".",
+        "declaration": true,
+        "experimentalDecorators": true,
+        "strict": true,
+        "module": "es2015",
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "rootDir": ".",
+        "sourceMap": true,
+        "inlineSources": true,
+        "target": "es2015",
+        "skipLibCheck": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ]
+    },
+    "files": [
+        "main.ts"
+    ],
+    "angularCompilerOptions": {
+        "skipTemplateCodegen": true,
+        "annotateForClosureCompiler": true,
+        "strictMetadataEmit": true,
+        "flatModuleOutFile": "ngx-snackbar.js",
+        "flatModuleId": "ngx-snackbar"
+    }
+}
