@@ -4,14 +4,14 @@ import {CommonModule} from '@angular/common';
 export * from './service/snackbar.service';
 
 import {SnackbarService} from './service/snackbar.service';
+import {SnackComponent} from './snack/snack.component';
 import {SnackbarComponent} from './snackbar/snackbar.component';
-import {SnackbarsComponent} from './snackbars/snackbars.component';
 import {SafeHtmlPipe} from './pipe/safe-html.pipe';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [SnackbarComponent, SnackbarsComponent, SafeHtmlPipe],
-  exports: [SnackbarComponent, SnackbarsComponent],
+  declarations: [SnackbarComponent, SnackComponent, SafeHtmlPipe],
+  exports: [SnackbarComponent, SnackComponent],
   providers: [SnackbarService]
 })
 export class SnackbarModule {
