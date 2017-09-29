@@ -54,6 +54,5 @@
         "webpack": "^3.0.0",
         "yargs": "^9.0.1",
         "zone.js": "^0.8.12"
-    },
-    "dependencies": {}
+    }
 }

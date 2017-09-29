@@ -87,6 +87,7 @@ Use these properties to customize the snackbar component.
 | --- | --- | --- |
 | onAdd | Callback gets triggered on snackbar add | Object | 
 | onRemove | Callback gets triggered on snackbar remove | Object |
+| onClear | Callback gets triggered on snackbar clear | boolean |
 
 ###### *Object: `add` method options plus `id` string.*
 
