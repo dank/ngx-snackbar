@@ -1,0 +1,152 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col">
+      <h1>ngx-snackbar Demo</h1>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <div class="row mb-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Global Options
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="globalPosition">Position</label>
+                <select id="globalPosition" class="form-control" [(ngModel)]="globalPosition">
+                  <option [ngValue]="'top-left'">Top Left</option>
+                  <option [ngValue]="'top-center'">Top Center</option>
+                  <option [ngValue]="'top-right'">Top Right</option>
+                  <option [ngValue]="'bottom-left'">Bottom Left</option>
+                  <option [ngValue]="'bottom-center'">Bottom Center</option>
+                  <option [ngValue]="'bottom-right'">Bottom Right</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="globalMax">Maximum</label>
+                <input type="number" class="form-control" id="globalMax" [(ngModel)]="globalMax" placeholder="Infinity">
+              </div>
+              <div class="form-group">
+                <label for="globalTimeout">Timeout</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="globalTimeout" [(ngModel)]="globalTimeout" placeholder="Infinity">
+                  <div class="input-group-addon">ms</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="globalBackground">Background Color</label>
+                <input type="text" class="form-control" id="globalBackground" [(ngModel)]="globalBackground">
+              </div>
+              <div class="form-group">
+                <label for="globalColor">Text Color</label>
+                <input type="text" class="form-control" id="globalColor" [(ngModel)]="globalColor" placeholder="auto">
+              </div>
+              <div class="form-group">
+                <label for="globalAccent">Accent Color</label>
+                <input type="text" class="form-control" id="globalAccent" [(ngModel)]="globalAccent">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Local Options
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="localMsg">Message</label>
+                <input type="text" class="form-control" id="localMsg" [(ngModel)]="localMsg" [ngClass]="{'is-invalid': invalidForm}">
+                <div class="invalid-feedback">
+                  Please provide a messge.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="localTimeout">Timeout</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="localTimeout" [(ngModel)]="localTimeout"
+                         [placeholder]="globalTimeout || 'Infinity'">
+                  <div class="input-group-addon">ms</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="localBackground">Background Color</label>
+                <input type="text" class="form-control" id="localBackground" [(ngModel)]="localBackground" [placeholder]="globalBackground">
+              </div>
+              <div class="form-group">
+                <label for="localColor">Text Color</label>
+                <input type="text" class="form-control" id="localColor" [(ngModel)]="localColor" [placeholder]="globalColor || 'auto'">
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  Action
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="localAction">Text</label>
+                    <input type="text" class="form-control" id="localAction" [(ngModel)]="localAction">
+                  </div>
+                  <div class="form-group">
+                    <label for="localAccent">Color</label>
+                    <input type="text" class="form-control" id="localAccent" [(ngModel)]="localAccent" [placeholder]="globalAccent">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="row mb-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Controls
+            </div>
+            <div class="card-body">
+              <button class="btn btn-success" (click)="add()">
+                Add Snackbar
+              </button>
+              <button class="btn btn-danger" (click)="clear()">
+                Clear All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Code
+            </div>
+            <div class="card-body">
+              <pre>
+                <code>
+&lt;ngx-snackbar
+  [position]="'{{globalPosition}}'"{{globalMax ? '\n  [max]="' + globalMax + '"' : ''}}{{globalTimeout ? '\n  [timeout]="' + globalTimeout + '"' : ''}}{{globalBackground ? '\n  [background]="\'' + globalBackground + '\'"' : ''}}{{globalColor ? '\n  [color]="\'' + globalColor + '\'"' : ''}}{{globalAccent ? '\n  [accent]="\'' + globalAccent + '\'"' : ''}}
+&lt;/ngx-snackbar&gt;
+                </code>
+                <hr>
+                <code>
+this.snackbarService.add(&#123;
+  msg: '{{localMsg}}',{{localTimeout ? '\n  timeout: ' + localTimeout + ',' : ''}}{{localBackground ? '\n  background: \'' + localBackground + '\',' : ''}}{{localColor ? '\n  color: \'' + localColor + '\',' : ''}}{{localAction ? '\n  action: &#123;\n    text: \'' + localAction + '\',' + (localAccent ? '\n    color: \'' + localAccent + '\'' : '') + '\n  &#125;,' : ''}}
+&#125;);
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngx-snackbar [position]="globalPosition" [max]="globalMax" [timeout]="globalTimeout" [background]="globalBackground" [color]="globalColor"
+              [accent]="globalAccent"></ngx-snackbar>
