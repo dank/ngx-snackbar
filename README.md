@@ -26,7 +26,7 @@ Import styles.css into your app. This step is optional, feel free to theme the s
 ...
   "styles": [
    "styles.css",
-   "../node_modules/ngx-snackbar/bundles/style.css",
+   "../node_modules/ngx-snackbar/bundles/style.css"
   ],
 ...
 ```
@@ -61,10 +61,10 @@ System.config({
 });
 ```
 
-### Place the `ngx-snackbars` tag on your template
+### Place the `ngx-snackbar` tag on your template
 
 ```html
-<ngx-snackbars></ngx-snackbars>
+<ngx-snackbar></ngx-snackbar>
 ```
 
 **Options**
@@ -87,6 +87,7 @@ Use these properties to customize the snackbar component.
 | --- | --- | --- |
 | onAdd | Callback gets triggered on snackbar add | Object | 
 | onRemove | Callback gets triggered on snackbar remove | Object |
+| onClear | Callback gets triggered on snackbar clear | boolean |
 
 ###### *Object: `add` method options plus `id` string.*
 
@@ -103,7 +104,7 @@ import {SnackbarService} from 'ngx-snackbar';
 @Component({
   selector: 'app-root',
   template: `
-    <ngx-snackbars></ngx-snackbars>
+    <ngx-snackbar></ngx-snackbar>
   `
 })
 export class AppComponent {
@@ -115,7 +116,7 @@ export class AppComponent {
 
 - `add(options: Object)`
 
-All options will override global values set on `ngx-snackbars`.
+All options will override global values set on `ngx-snackbar`.
 
 | Name | Description | Type | Default | Optional |
 | --- | --- | --- | --- | --- |
@@ -150,7 +151,7 @@ import {SnackbarService} from 'ngx-snackbar';
       <br>
       <button (click)="clear()">Clear</button>
       
-      <ngx-snackbars [position]="'bottom-center'" [max]="3"></ngx-snackbars>
+      <ngx-snackbar [position]="'bottom-center'" [max]="3"></ngx-snackbar>
   `
 })
 export class AppComponent {
