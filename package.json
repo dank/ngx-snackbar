@@ -6,7 +6,8 @@
     "module": "./modules/ngx-snackbar.es5.js",
     "es2015": "./modules/ngx-snackbar.js",
     "scripts": {
-        "build": "node ./scripts/build.js"
+        "build": "node ./scripts/build.js",
+        "postinstall": "npm run build"
     },
     "typings": "./ngx-snackbar.d.ts",
     "author": "Dan Kyung",
