@@ -22,6 +22,9 @@
         "snackbar",
         "toast"
     ],
+    "files": [
+      "dist"
+    ],
     "license": "MIT",
     "peerDependencies": {
         "@angular/common": "^4.0.0",
