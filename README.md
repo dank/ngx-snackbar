@@ -3,7 +3,7 @@
 
 **Not tested on Angular 2**
 
-[Demo](https://dank.tw/)
+[Demo](http://kyung.ca/ngx-snackbar/)
 
 ## Installation
     npm install --save ngx-snackbar
