@@ -14,23 +14,10 @@
 
 Import styles.css into your app. This step is optional, feel free to theme the snackbars to your liking.
 
-`index.html`
-```html
-<link rel="stylesheet" href="node_modules/ngx-snackbar/bundles/style.css">
+To do so, add the following line should be added to ```styles.css```:
+```javascript
+@import "~ngx-snackbar/bundles/style.css";
 ```
-
-**Angular CLI**
-
-`.angular-cli.json`
-```json
-...
-  "styles": [
-   "styles.css",
-   "../node_modules/ngx-snackbar/bundles/style.css"
-  ],
-...
-```
-
 ### Import `SnackbarModule`
 
 ```javascript
