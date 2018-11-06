@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "noImplicitAny": false,
+        "strictPropertyInitialization": false,
         "baseUrl": ".",
         "declaration": true,
         "experimentalDecorators": true,
