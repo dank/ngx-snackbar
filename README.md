@@ -1,7 +1,5 @@
 # ngx-snackbar
-> Angular 4 component for Snackbar (AKA Toast) notifications. 
-
-**Not tested on Angular 2**
+> Angular 7 component for Snackbar (AKA Toast) notifications. 
 
 [Demo](http://kyung.ca/ngx-snackbar/)
 
