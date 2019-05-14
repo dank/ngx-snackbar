@@ -69,9 +69,9 @@ export class SnackbarComponent {
 
     if (snack.action) {
       const that = this;
-      const fcn = snack.action.onClick || new Function();
+      const fcn = snack.action.onClick;
       snack.action.onClick = () => {
-        fcn(data);
+        fcn && typeof fcn === 'function' && fcn(data);
         that.remove(id);
       };
     }
